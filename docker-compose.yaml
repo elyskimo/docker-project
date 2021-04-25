@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  api:
+    restart: always
+    build: ./server
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+  client:
+    restart: always
+    build: ./client
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+  mongo:
+    image: mongo
+    expose:
+      - "27017"
+    ports:
+      - "27017:27017"
+    volumes:
+      - apiDB:/data/db
+
+volumes:
+  apiDB:
