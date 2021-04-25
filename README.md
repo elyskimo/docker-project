@@ -1,12 +1,12 @@
 # Elective Docker projet
 
-- Frontend: Vue js
-- Backend: Express
-- Database: Mongo
+- Frontend: **Vue js**
+- Backend: **Express**
+- Database: **Mongo**
 
 ```
-cd /client && npm i
-cd /server && npm i
+cd client && npm i
+cd server && npm i
 docker-compose up
 ```
 
